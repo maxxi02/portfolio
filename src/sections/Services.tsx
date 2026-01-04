@@ -36,7 +36,7 @@ const Services = () => {
       />
       {servicesData.map((service, index) => (
         <div
-          className="sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30 top-0"
+          className="sticky top-0 px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30 "
           ref={(el) => {
             serviceRefs.current[index] = el;
           }}
