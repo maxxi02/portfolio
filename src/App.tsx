@@ -8,6 +8,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./sections/About";
 import Works from "./sections/Works";
+import ContactSummary from "./sections/ContactSummary";
+import Contact from "./sections/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +42,8 @@ const App = () => {
       <Services />
       <About />
       <Works />
+      <ContactSummary />
+      <Contact />
     </div>
   );
 };
