@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import ServiceSummary from "./sections/ServiceSummary";
 import Services from "./sections/Services";
+import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./sections/About";
@@ -12,19 +13,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   useEffect(() => {
-    // Simple CSS smooth scrolling
-    document.documentElement.style.scrollBehavior = "smooth";
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
 
-    // Update ScrollTrigger on scroll
-    const handleScroll = () => {
-      ScrollTrigger.update();
-    };
+    lenis.on("scroll", ScrollTrigger.update);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      document.documentElement.style.scrollBehavior = "auto";
-      window.removeEventListener("scroll", handleScroll);
+      lenis.destroy();
+      gsap.ticker.remove(() => {});
     };
   }, []);
 
