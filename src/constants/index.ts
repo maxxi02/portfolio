@@ -195,12 +195,12 @@ export const socials = [
   {
     icon: FacebookIcon,
     name: "Facebook",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "https://www.facebook.com/rojan.999999",
   },
   {
     icon: LinkedInIcon,
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "https://www.linkedin.com/in/rojan-notorio-008304374/",
   },
-  { icon: GitHubIcon, name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  { icon: GitHubIcon, name: "GitHub", href: "https://github.com/maxxi02" },
 ];

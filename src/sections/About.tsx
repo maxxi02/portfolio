@@ -8,12 +8,14 @@ const About = () => {
   const text = `Passionate about clean architecture
     I build scalable, high-performance solutions
     from prototype to production`;
-  const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
-  When I’m not shipping:
-⚡️ Open-sourcing my latest experiment (or hacking on yours)
-🎥 Teaching devs on Twitch/YouTube—because rising tides lift all ships
-🧗 Rock climbing (problem-solving with real stakes)
-🎸 Strumming chords while CI pipelines pass (multitasking at its finest)`;
+  const aboutText = `Full-stack developer building scalable, high-performance web applications with React, Node.js, and TypeScript. I focus on clean architecture, secure APIs, and quality-driven development through testing and CI/CD.
+
+  What I bring to the table:
+  🚀 End-to-end development of web apps, from responsive React UIs to robust RESTful backends  
+  🧪 Quality-driven engineering through automated testing, Playwright, and CI/CD pipelines  
+  🔐 Secure authentication, payment integrations, and API-first architectures  
+  🤝 Collaboration, code reviews, and agile workflows to ship features faster and better`;
+
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -50,7 +52,7 @@ const About = () => {
       <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="images/man.jpg"
+          src="images/man.png"
           alt="man"
           className="w-md rounded-3xl"
         />
